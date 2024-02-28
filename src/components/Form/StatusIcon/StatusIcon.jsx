@@ -6,12 +6,12 @@ const StatusIcon = ({ isError, isValid }) => {
     <>
       {isError && (
         <Svg>
-          <use xlinkHref="/src/assets/svg/svgSprite.svg#icon-error"></use>
+          <use xlinkHref="./svg/svgSprite.svg#icon-error"></use>
         </Svg>
       )}
       {isValid && (
         <Svg>
-          <use xlinkHref="/src/assets/svg/svgSprite.svg#icon-done"></use>
+          <use xlinkHref="./svg/svgSprite.svg#icon-done"></use>
         </Svg>
       )}
     </>

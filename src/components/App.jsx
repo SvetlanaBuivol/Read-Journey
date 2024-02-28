@@ -18,7 +18,7 @@ function App() {
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/" element={<PrivateRoute><SharedLayout/></PrivateRoute>}>
-        <Route index element={<Navigate to="/recommended"/>}/>
+        <Route index element={<Navigate to="recommended"/>}/>
         <Route path="recommended" element={<Recommended />} />
         <Route path="library" element={<Library />} />
       </Route>

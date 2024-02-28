@@ -2,7 +2,7 @@ import { Navigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const PublicRoute = ({children}) => {
-    const isLoggedIn = true;
+    const isLoggedIn = false;
 
     return !isLoggedIn ? children : <Navigate to="/"/>
 }
