@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkread_journey=self.webpackChunkread_journey||[]).push([[68],{68:(e,d,r)=>{r.r(d),r.d(d,{default:()=>s});var n=r(579);const s=()=>(0,n.jsx)("div",{children:"Recommended"})}}]);
+//# sourceMappingURL=68.74dc1e29.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/68.74dc1e29.chunk.js","mappings":"mJAAA,MAMA,EANoBA,KAEZC,EAAAA,EAAAA,KAAA,OAAAC,SAAK,e","sources":["pages/Recommended.jsx"],"sourcesContent":["const Recommended = () => {\n    return (\n        <div>Recommended</div>\n    )\n}\n\nexport default Recommended;"],"names":["Recommended","_jsx","children"],"sourceRoot":""}
