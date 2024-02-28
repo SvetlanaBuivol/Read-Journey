@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode> 
     <Suspense fallback={<div>Loading</div>}>
-      <BrowserRouter basename='/read-journey/'>
+      <BrowserRouter basename='/read-journey'>
         <GlobalStyle />
         <App />
       </BrowserRouter>
