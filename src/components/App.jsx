@@ -10,8 +10,8 @@ import PublicRoute from './Routs/PublicRoute';
 function App() {
   return (
     <Routes>
-      <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
-      <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
+      <Route path="/read-journey/register" element={<PublicRoute><Register /></PublicRoute>} />
+      <Route path="/read-journey/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/" element={<PrivateRoute><SharedLayout/></PrivateRoute>}>
         <Route index element={<Navigate to="/recommended"/>}/>
         <Route path="/recommended" element={<Recommended />} />
