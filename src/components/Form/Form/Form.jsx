@@ -9,7 +9,7 @@ const FormBox = ({ initialValues, validationSchema, onSubmit, children }) => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {() => <StyledForm>{children}</StyledForm>}
+      {() => <StyledForm >{children}</StyledForm>}
     </Formik>
   );
 };

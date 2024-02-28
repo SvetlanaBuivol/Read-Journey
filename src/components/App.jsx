@@ -1,8 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Register from '../pages/Register';
 import Library from '../pages/Library';
@@ -18,9 +13,9 @@ function App() {
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="/" element={<PrivateRoute><SharedLayout/></PrivateRoute>}>
-        <Route index element={<Navigate to="recommended"/>}/>
-        <Route path="recommended" element={<Recommended />} />
-        <Route path="library" element={<Library />} />
+        <Route index element={<Navigate to="/recommended"/>}/>
+        <Route path="/recommended" element={<Recommended />} />
+        <Route path="/library" element={<Library />} />
       </Route>
     </Routes>
   );
