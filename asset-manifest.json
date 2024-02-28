@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bfb6520.css",
-    "main.js": "/static/js/main.05a7e67a.js",
-    "static/media/SFProDisplay-Semibold.ttf": "/static/media/SFProDisplay-Semibold.dfc89e609e62dde18375.ttf",
-    "static/media/iPhoneDesktop.png": "/static/media/iPhoneDesktop.bb568ef79d9ac2b80182.png",
-    "static/media/Gilroy-Bold.ttf": "/static/media/Gilroy-Bold.901a60fc2835c74fba67.ttf",
-    "static/media/iPhoneMobile.png": "/static/media/iPhoneMobile.85e6278e53da3375d646.png",
-    "static/media/Gilroy-Medium.woff": "/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
-    "index.html": "/index.html",
-    "main.8bfb6520.css.map": "/static/css/main.8bfb6520.css.map",
-    "main.05a7e67a.js.map": "/static/js/main.05a7e67a.js.map"
+    "main.css": "/read-journey/static/css/main.2b1a43ac.css",
+    "main.js": "/read-journey/static/js/main.6b0c55ba.js",
+    "static/media/SFProDisplay-Semibold.ttf": "/read-journey/static/media/SFProDisplay-Semibold.dfc89e609e62dde18375.ttf",
+    "static/media/iPhoneDesktop.png": "/read-journey/static/media/iPhoneDesktop.bb568ef79d9ac2b80182.png",
+    "static/media/Gilroy-Bold.ttf": "/read-journey/static/media/Gilroy-Bold.901a60fc2835c74fba67.ttf",
+    "static/media/iPhoneMobile.png": "/read-journey/static/media/iPhoneMobile.85e6278e53da3375d646.png",
+    "static/media/Gilroy-Medium.woff": "/read-journey/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
+    "index.html": "/read-journey/index.html",
+    "main.2b1a43ac.css.map": "/read-journey/static/css/main.2b1a43ac.css.map",
+    "main.6b0c55ba.js.map": "/read-journey/static/js/main.6b0c55ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bfb6520.css",
-    "static/js/main.05a7e67a.js"
+    "static/css/main.2b1a43ac.css",
+    "static/js/main.6b0c55ba.js"
   ]
 }
