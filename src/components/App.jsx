@@ -17,7 +17,6 @@ function App() {
     <Routes>
       <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
       <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
-      <Route path="/read-journey" element={<Navigate to="/login" />}/>
       <Route path="/" element={<PrivateRoute><SharedLayout/></PrivateRoute>}>
         <Route index element={<Navigate to="/recommended"/>}/>
         <Route path="recommended" element={<Recommended />} />
