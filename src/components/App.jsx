@@ -4,10 +4,10 @@ import SharedLayout from '../components/SharedLayout/SharedLayout';
 import PrivateRoute from './Routs/PrivateRoute';
 import PublicRoute from './Routs/PublicRoute';
 
-const Register = lazy(() => import('../../src/pages/Register'));
-const Login = lazy(() => import('../../src/pages/Login'));
-const Recommended = lazy(() => import('../../src/pages/Recommended'));
-const Library = lazy(() => import('../../src/pages/Library'));
+const Register = lazy(() => import('../pages/Register'));
+const Login = lazy(() => import('../pages/Login'));
+const Recommended = lazy(() => import('../pages/Recommended'));
+const Library = lazy(() => import('../pages/Library'));
 
 function App() {
   return (
