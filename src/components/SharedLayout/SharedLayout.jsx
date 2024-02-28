@@ -7,6 +7,7 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 import UserNav from '../UserNav/UserNav';
 import Logo from '../Logo/Logo';
 import {Box, HeaderWrapper} from './SharedLayout.styled';
+import { Suspense } from 'react';
 
 const SharedLayout = () => {
 
@@ -40,7 +41,9 @@ const SharedLayout = () => {
       </header>
 
       <main>
-        <Outlet />
+        <Suspense>
+          <Outlet />
+          </Suspense>
       </main>
     </>
   );
