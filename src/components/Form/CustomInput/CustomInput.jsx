@@ -25,6 +25,7 @@ const CustomInput = ({ label, ...props }) => {
 
   return (
     <>
+      <div>
       <InputWrapper $error={isError} $valid={isValid}>
         <label>{label}</label>
         <Input
@@ -52,7 +53,8 @@ const CustomInput = ({ label, ...props }) => {
       {isError && <ErrorMessage>{meta.error}</ErrorMessage>}
       {isValid && isPasswordInput && (
         <ValidMessage>Password is secure</ValidMessage>
-      )}
+        )}
+        </div>
     </>
   );
 };
