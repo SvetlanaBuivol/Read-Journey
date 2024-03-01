@@ -1,10 +1,10 @@
 import CustomInput from '../CustomInput/CustomInput';
-import { validationLoginSchema } from '../../../helpers/form/validationSchema';
-import { initialLoginValues } from '../../../helpers/form/initialValues';
+import { validationLoginSchema } from '../../../../helpers/form/validationSchema';
+import { initialLoginValues } from '../../../../helpers/form/initialValues';
 import AuthLink from '../AuthLink/AuthLink';
-import FormBox from '../Form/Form';
 import { AuthButtonsWrapper, InputWrapper } from './LoginForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
+import AuthForm from '../AuthForm/AuthForm';
 
 const LoginForm = () => {
   const onSubmit = (values, actions) => {
@@ -13,7 +13,7 @@ const LoginForm = () => {
   };
 
   return (
-    <FormBox
+    <AuthForm
       initialValues={initialLoginValues}
       validationSchema={validationLoginSchema}
       onSubmit={onSubmit}
@@ -36,7 +36,7 @@ const LoginForm = () => {
         <AuthButton type="submit" text='Log in'/>
         <AuthLink page="register" text="Don’t have an account? " />
       </AuthButtonsWrapper>
-    </FormBox>
+    </AuthForm>
   );
 };
 

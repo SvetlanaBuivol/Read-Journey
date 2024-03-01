@@ -1,10 +1,10 @@
 import CustomInput from '../CustomInput/CustomInput';
-import { validationRegisterSchema } from '../../../helpers/form/validationSchema';
-import { initialRegisterValues } from '../../../helpers/form/initialValues';
+import { validationRegisterSchema } from '../../../../helpers/form/validationSchema';
+import { initialRegisterValues } from '../../../../helpers/form/initialValues';
 import AuthLink from '../AuthLink/AuthLink';
-import FormBox from '../Form/Form';
 import { AuthButtonsWrapper, InputWrapper } from './RegisterForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
+import AuthForm from '../AuthForm/AuthForm';
 
 const RegisterForm = () => {
   const onSubmit = (values, actions) => {
@@ -12,7 +12,7 @@ const RegisterForm = () => {
     actions.resetForm();
   };
   return (
-    <FormBox
+    <AuthForm
       initialValues={initialRegisterValues}
       validationSchema={validationRegisterSchema}
       onSubmit={onSubmit}
@@ -41,7 +41,7 @@ const RegisterForm = () => {
         <AuthButton text='Registration' $register/>
         <AuthLink page="login" text="Already have an account?" />
       </AuthButtonsWrapper>
-    </FormBox>
+    </AuthForm>
   );
 };
 

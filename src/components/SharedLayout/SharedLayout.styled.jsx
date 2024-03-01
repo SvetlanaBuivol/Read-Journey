@@ -1,5 +1,25 @@
 import styled from 'styled-components';
-import { wrapperMixin } from '../../css/variables';
+import { containerMixin, wrapperMixin } from '../../css/variables';
+
+export const Container = styled.div`
+  ${containerMixin}
+  padding-bottom: 0;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+    padding-bottom: 0;
+  }
+`;
+
+export const ContainerOutlet = styled.div`
+  ${containerMixin}
+  padding-top: 0;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+`
 
 export const HeaderWrapper = styled.div`
   ${wrapperMixin}

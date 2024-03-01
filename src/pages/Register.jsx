@@ -1,5 +1,5 @@
 import Container from '../components/Container/Container';
-import RegisterForm from '../components/Form/RegisterForm/RegisterForm';
+import RegisterForm from '../components/Form/AuthForms/RegisterForm/RegisterForm';
 import PhoneImage from '../components/PhoneImage/PhoneImage';
 import WelcomPage from '../components/WelcomePage/WelcomPage';
 

@@ -24,6 +24,7 @@ export const StyledLink = styled(NavLink)`
   line-height: 1.28;
   letter-spacing: -0.02em;
   color: ${colors.lightGrey};
+  text-decoration: none;
 
   &.active {
     color: ${colors.white};

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { colors, textSize } from '../../../css/variables';
+import { colors, textSize } from '../../../../css/variables';
 
 export const StyledLink = styled(Link)`
   line-height: 1.16;

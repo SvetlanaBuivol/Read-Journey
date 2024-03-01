@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {
   authButtonWrapperMixin,
   inputWrapperMixin,
-} from '../../../css/variables';
+} from '../../../../css/variables';
 
 export const InputWrapper = styled.div`
   ${inputWrapperMixin}

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, textSize } from "../../../css/variables";
+import { colors, textSize } from "../../../../css/variables";
 
 export const Button = styled.button`
     display: flex;

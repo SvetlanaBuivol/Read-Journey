@@ -24,6 +24,30 @@ export const textSize = {
   xl: '64px',
 };
 
+export const containerMixin = css`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 375px;
+  padding: 20px 20px 10px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 375px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 32px;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    width: 1280px;
+  }
+`;
+
 export const wrapperMixin = css`
   display: flex;
   width: 100%;
@@ -31,6 +55,11 @@ export const wrapperMixin = css`
   margin: 0 auto;
   background-color: ${colors.darkGrey};
 `;
+
+export const innerWrapper = css`
+  border-radius: 12px;
+    background-color: ${colors.mediumGrey};
+`
 
 export const backdropMixin = css`
   position: fixed;
@@ -42,18 +71,37 @@ export const backdropMixin = css`
   background-color: ${colors.backdrop};
 `;
 
+export const buttonMixin = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  border: 1px solid ${colors.transparentWhite};
+  padding: 10px 20px;
+  font-family: 'Gilroy-Bold';
+  font-size: ${textSize.xxs};
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 28px;
+    font-size: ${textSize.xs};
+    line-height: 1.12;
+  }
+`;
+
 export const inputWrapperMixin = css`
-   display: flex;
+  display: flex;
   flex-direction: column;
   gap: 8px;
-`
+`;
 
 export const authButtonWrapperMixin = css`
   display: flex;
-    gap: 14px;
-    align-items: center;
+  gap: 14px;
+  align-items: center;
 
-    @media screen and (min-width: 768px) {
-       gap: 20px; 
-    }
-`
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+`;
