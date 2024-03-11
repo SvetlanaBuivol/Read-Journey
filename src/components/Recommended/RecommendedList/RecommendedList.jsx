@@ -1,4 +1,7 @@
+import PagesTitle from 'components/PagesTitle/PagesTitle';
 import RecommendedCard from '../RecommendedCard/RecomendedCard';
+import { BooksList, Wrapper } from './RecommendedList.styled';
+import Pagination from 'components/Pagination/Pagination';
 const recommendedBooks = [
   {
     id: 1,
@@ -64,17 +67,21 @@ const recommendedBooks = [
 
 const RecommendedList = () => {
   return (
-    <ul>
-      {recommendedBooks.map(book => (
-        <li key={book.id}>
-          <RecommendedCard
-            bookTitle={book.title}
-            img={book.img}
-            author={book.author}
-          />
-        </li>
-      ))}
-    </ul>
+    <Wrapper>
+      <PagesTitle title="Recommended" />
+      <BooksList>
+        {recommendedBooks.map(book => (
+          <li key={book.id}>
+            <RecommendedCard
+              bookTitle={book.bookTitle}
+              img={book.img}
+              author={book.author}
+            />
+          </li>
+        ))}
+      </BooksList>
+      <Pagination/>
+    </Wrapper>
   );
 };
 
