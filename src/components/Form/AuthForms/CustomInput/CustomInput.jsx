@@ -38,7 +38,7 @@ const CustomInput = ({ label, ...props }) => {
                 : 'password'
               : props.type
           }
-          autoComplete="off"
+            autoComplete='off'
         />
         <IconWrapper>
           {isPasswordInput && (

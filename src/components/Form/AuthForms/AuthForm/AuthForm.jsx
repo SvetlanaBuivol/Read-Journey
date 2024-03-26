@@ -9,7 +9,7 @@ const AuthForm = ({ initialValues, validationSchema, onSubmit, children }) => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {() => <StyledForm >{children}</StyledForm>}
+      {() => <StyledForm autoComplete='off'>{children}</StyledForm>}
     </Formik>
   );
 };

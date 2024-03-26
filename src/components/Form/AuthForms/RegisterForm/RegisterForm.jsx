@@ -5,9 +5,14 @@ import AuthLink from '../AuthLink/AuthLink';
 import { AuthButtonsWrapper, InputWrapper } from './RegisterForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
 import AuthForm from '../AuthForm/AuthForm';
+import { useDispatch } from 'react-redux';
+import { registerAsync } from '../../../../redux/auth/authOperations';
 
 const RegisterForm = () => {
+  const dispatch = useDispatch();
+
   const onSubmit = (values, actions) => {
+    dispatch(registerAsync(values));
     console.log('onSubmit  values', values);
     actions.resetForm();
   };

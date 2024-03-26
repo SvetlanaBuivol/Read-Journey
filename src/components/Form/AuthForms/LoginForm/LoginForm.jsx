@@ -5,10 +5,14 @@ import AuthLink from '../AuthLink/AuthLink';
 import { AuthButtonsWrapper, InputWrapper } from './LoginForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
 import AuthForm from '../AuthForm/AuthForm';
+import { useDispatch } from 'react-redux';
+import { loginAsync } from '../../../../redux/auth/authOperations';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const onSubmit = (values, actions) => {
-    console.log('onSubmit  values', values);
+    dispatch(loginAsync(values));
     actions.resetForm();
   };
 
@@ -33,7 +37,7 @@ const LoginForm = () => {
         />
       </InputWrapper>
       <AuthButtonsWrapper>
-        <AuthButton type="submit" text='Log in'/>
+        <AuthButton type="submit" text="Log in" />
         <AuthLink page="register" text="Don’t have an account? " />
       </AuthButtonsWrapper>
     </AuthForm>

@@ -8,6 +8,7 @@ export const BookCard = styled.div`
     width: 137px;
 
     img {
+        height: 208px;
         border-radius: 8px;
     }
 `
@@ -16,6 +17,9 @@ export const BookInfo = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     h3 {
         font-family: 'Gilroy-Bold';
