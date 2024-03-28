@@ -37,6 +37,8 @@ const RecommendedList = () => {
               bookTitle={book.title}
               img={book.imageUrl}
               author={book.author}
+              totalPages={book.totalPages}
+              id={book._id}
             />
           </li>
         ))}

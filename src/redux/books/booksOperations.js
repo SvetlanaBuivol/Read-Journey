@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchRecommendedBooks } from 'services/booksApi';
+import { addBookById, fetchRecommendedBooks } from '../../services/booksApi';
 
 export const recommendedBooksAsync = createAsyncThunk(
   'books/recommended',
@@ -22,3 +22,15 @@ export const recommendedBooksAsync = createAsyncThunk(
     }
   }
 );
+
+export const addBookByIdAsync = createAsyncThunk(
+  'books/addById',
+  async (credentials, thunkAPI) => {
+    try {
+      await addBookById(credentials)
+    } catch (error) {
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  })
+

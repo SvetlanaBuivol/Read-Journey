@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import Notiflix from 'notiflix';
 import { logIn, signUp, logOut, token, currentUser } from 'services/authApi';
 
 export const registerAsync = createAsyncThunk(
@@ -37,6 +38,7 @@ export const signoutAsync = createAsyncThunk(
         await logOut();
         token.unset()
     } catch (error) {
+      Notiflix.Notify.failure('Oops! Something went wrong. Please try again')
       return thunkAPI.rejectWithValue(error.message);
     }
   }

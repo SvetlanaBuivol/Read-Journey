@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ModalWrapper from "../Modal/ModalWrapper/ModalWrapper";
 import MobileMenuModal from '../Modal/MobileMenuModal/MobileMenuModal'
+import ModalPortal from "components/Modal/ModalPortal/ModalPortal";
 
 
 const MobileMenu = () => {
@@ -21,7 +21,7 @@ const MobileMenu = () => {
         </svg>
       </button>
 
-      <ModalWrapper component={MobileMenuModal} isOpen={modalIsOpen} onClose={closeModal} />
+      <ModalPortal isOpen={modalIsOpen} ><MobileMenuModal onClose={closeModal}/></ModalPortal>
     </>
   );
 };
