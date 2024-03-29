@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/read-journey/static/css/main.2b1a43ac.css",
-    "main.js": "/read-journey/static/js/main.9761f1bd.js",
+    "main.js": "/read-journey/static/js/main.a055337a.js",
     "static/js/709.bec1ea51.chunk.js": "/read-journey/static/js/709.bec1ea51.chunk.js",
     "static/js/90.1091c7a4.chunk.js": "/read-journey/static/js/90.1091c7a4.chunk.js",
     "static/js/380.d7a4e2cb.chunk.js": "/read-journey/static/js/380.d7a4e2cb.chunk.js",
-    "static/js/502.e2cf8fe1.chunk.js": "/read-journey/static/js/502.e2cf8fe1.chunk.js",
+    "static/js/308.e11e2db9.chunk.js": "/read-journey/static/js/308.e11e2db9.chunk.js",
     "static/js/516.951db09e.chunk.js": "/read-journey/static/js/516.951db09e.chunk.js",
     "static/js/899.edaa2bae.chunk.js": "/read-journey/static/js/899.edaa2bae.chunk.js",
+    "static/js/782.2f8ad19d.chunk.js": "/read-journey/static/js/782.2f8ad19d.chunk.js",
     "static/media/SFProDisplay-Semibold.ttf": "/read-journey/static/media/SFProDisplay-Semibold.dfc89e609e62dde18375.ttf",
     "static/media/iPhoneDesktop.png": "/read-journey/static/media/iPhoneDesktop.bb568ef79d9ac2b80182.png",
     "static/media/Gilroy-Bold.ttf": "/read-journey/static/media/Gilroy-Bold.901a60fc2835c74fba67.ttf",
@@ -15,16 +16,17 @@
     "static/media/Gilroy-Medium.woff": "/read-journey/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
     "index.html": "/read-journey/index.html",
     "main.2b1a43ac.css.map": "/read-journey/static/css/main.2b1a43ac.css.map",
-    "main.9761f1bd.js.map": "/read-journey/static/js/main.9761f1bd.js.map",
+    "main.a055337a.js.map": "/read-journey/static/js/main.a055337a.js.map",
     "709.bec1ea51.chunk.js.map": "/read-journey/static/js/709.bec1ea51.chunk.js.map",
     "90.1091c7a4.chunk.js.map": "/read-journey/static/js/90.1091c7a4.chunk.js.map",
     "380.d7a4e2cb.chunk.js.map": "/read-journey/static/js/380.d7a4e2cb.chunk.js.map",
-    "502.e2cf8fe1.chunk.js.map": "/read-journey/static/js/502.e2cf8fe1.chunk.js.map",
+    "308.e11e2db9.chunk.js.map": "/read-journey/static/js/308.e11e2db9.chunk.js.map",
     "516.951db09e.chunk.js.map": "/read-journey/static/js/516.951db09e.chunk.js.map",
-    "899.edaa2bae.chunk.js.map": "/read-journey/static/js/899.edaa2bae.chunk.js.map"
+    "899.edaa2bae.chunk.js.map": "/read-journey/static/js/899.edaa2bae.chunk.js.map",
+    "782.2f8ad19d.chunk.js.map": "/read-journey/static/js/782.2f8ad19d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2b1a43ac.css",
-    "static/js/main.9761f1bd.js"
+    "static/js/main.a055337a.js"
   ]
 }
