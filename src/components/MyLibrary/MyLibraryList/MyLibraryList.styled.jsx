@@ -15,6 +15,11 @@ export const Wrapper = styled.div`
   } 
 `
 
+export const Box = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
 export const BooksList = styled.ul`
   display: flex;
   flex-wrap: wrap;

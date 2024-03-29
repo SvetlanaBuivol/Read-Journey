@@ -8,6 +8,7 @@ export const colors = {
   lightGrey30: 'rgba(227, 227, 227, 0.3)',
   lightGrey50: 'rgba(227, 227, 227, 0.5)',
   mediumGrey: '#262626',
+  borderGrey: '#3E3E3E',
   darkGrey: '#1F1F1F',
   mainBgColor: '#141414',
   backdrop: 'rgba(20, 20, 20, 0.6)',

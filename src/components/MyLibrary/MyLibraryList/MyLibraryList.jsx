@@ -4,7 +4,8 @@ import { getOwnBooksAsync } from '../../../redux/books/booksOperations';
 import PagesTitle from '../../../components/PagesTitle/PagesTitle';
 import { getOwnBooks } from '../../../redux/books/booksSelectors';
 import MyLibraryBookCard from '../MyLibraryBookCard/MyLibraryBookCard';
-import { BooksList, Wrapper } from './MyLibraryList.styled';
+import { BooksList, Box, Wrapper } from './MyLibraryList.styled';
+import MyLibrarySelect from '../MyLibrarySelect/MyLibrarySelect';
 
 const MyLibraryList = () => {
   const books = useSelector(getOwnBooks);
@@ -16,7 +17,10 @@ const MyLibraryList = () => {
 
   return (
     <Wrapper>
+      <Box>
       <PagesTitle title="My library" />
+        <MyLibrarySelect />
+        </Box>
       {books.length ? (
         <BooksList>
           {books.map(book => (
