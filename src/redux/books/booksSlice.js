@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-const { recommendedBooksAsync } = require('./booksOperations');
+const { recommendedBooksAsync, addBookAsync, getOwnBooksAsync, deleteOwnBookAsync } = require('./booksOperations');
 
 const initialState = {
   books: [],
+  ownBooks: [],
   currentPage: 1,
   totalPages: 0,
 };
@@ -27,9 +28,20 @@ const booksSlice = createSlice({
       state.books = action.payload.results;
       state.totalPages = action.payload.totalPages;
       state.currentPage = action.payload.page;
-      console.log('builder.addCase  action.payload', action.payload);
+    });
+    builder.addCase(addBookAsync.fulfilled, (state, action) => {
+      // state.books = action.payload.results;
+      // state.totalPages = action.payload.totalPages;
+      // state.currentPage = action.payload.page;
+    });
+    builder.addCase(getOwnBooksAsync.fulfilled, (state, action) => {
+      state.ownBooks = action.payload;
+    });
+    builder.addCase(deleteOwnBookAsync.fulfilled, (state, action) => {
+      state.ownBooks = state.ownBooks.filter(book => action.payload.id !== book._id);
     });
   },
+  
 });
 
 export const {goToNextPage, goToPrevPage} = booksSlice.actions

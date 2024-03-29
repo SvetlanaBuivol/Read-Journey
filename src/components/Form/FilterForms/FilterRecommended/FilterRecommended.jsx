@@ -7,19 +7,18 @@ import { recommendedBooksAsync } from '../../../../redux/books/booksOperations';
 import Notiflix from 'notiflix';
 
 const FilterRecommended = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const onSubmit = ({ title, author }, actions) => {
     // filterBooks({title, author})
     if (title || author) {
-      dispatch(recommendedBooksAsync({title, author}))
-    actions.resetForm();
+      dispatch(recommendedBooksAsync({ title, author }));
+      actions.resetForm();
     } else {
       Notiflix.Notify.warning('At least one field must be filled in', {
-        position: 'center-center'
-      })
+        position: 'center-center',
+      });
     }
-     
   };
   return (
     <div>

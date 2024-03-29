@@ -1,5 +1,4 @@
 import { useState } from 'react';
-// import ModalWrapper from '../../../components/Modal/ModalWrapper/ModalWrapper';
 import { BookCard, BookInfo } from './RecommendedCard.styled';
 import ModalBackdrop from '../../../components/Modal/ModalBackdrop/ModalBackdrop';
 import ModalRecommended from '../../../components/Modal/ModalRecommended/ModalRecommended';

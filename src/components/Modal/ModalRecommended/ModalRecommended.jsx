@@ -18,7 +18,7 @@ const ModalRecommended = ({ onClose, book }) => {
     dispatch(addBookByIdAsync(book.id));
     onClose();
   };
-  console.log('handleAddBook  book._id', book.id);
+
   return (
     <ModalContant>
       <CloseButton type="button" onClick={onClose}>

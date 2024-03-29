@@ -59,8 +59,8 @@ export const wrapperMixin = css`
 
 export const innerWrapper = css`
   border-radius: 12px;
-    background-color: ${colors.mediumGrey};
-`
+  background-color: ${colors.mediumGrey};
+`;
 
 export const backdropMixin = css`
   position: fixed;

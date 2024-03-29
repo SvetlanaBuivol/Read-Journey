@@ -22,13 +22,13 @@ export const ModalContant = styled.div`
 `;
 
 export const BookCard = styled.div`
-    width: 140px;
-     text-align: center;
+  width: 140px;
+  text-align: center;
 
-    @media screen and (min-width: 768px) {
-        width: 153px;
-    }
-`
+  @media screen and (min-width: 768px) {
+    width: 153px;
+  }
+`;
 
 export const CloseButton = styled.button`
   position: absolute;
@@ -44,11 +44,10 @@ export const Image = styled.img`
   margin-bottom: 16px;
   border-radius: 8px;
 
-  
-    @media screen and (min-width: 768px) {
-        width: 153px;
-        height: 233px;
-    }
+  @media screen and (min-width: 768px) {
+    width: 153px;
+    height: 233px;
+  }
 `;
 
 export const BookTitle = styled.h3`
@@ -76,10 +75,10 @@ export const Pages = styled.p`
   margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-        margin-bottom: 32px;
-    }
+    margin-bottom: 32px;
+  }
 `;
 
 export const Button = styled.button`
-    ${buttonMixin}
-`
+  ${buttonMixin}
+`;

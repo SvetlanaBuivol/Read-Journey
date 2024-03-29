@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { addBookById, fetchRecommendedBooks } from '../../services/booksApi';
+import { addBook, addBookById, deleteOwnBook, fetchRecommendedBooks, getOwnBooks } from '../../services/booksApi';
 
 export const recommendedBooksAsync = createAsyncThunk(
   'books/recommended',
@@ -34,3 +34,36 @@ export const addBookByIdAsync = createAsyncThunk(
     }
   })
 
+export const addBookAsync = createAsyncThunk(
+  'books/addBook',
+  async (credentials, thunkAPI) => {
+    try {
+      await addBook(credentials)
+    } catch (error) {
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  })
+
+  export const getOwnBooksAsync = createAsyncThunk(
+  'books/getOwnBooks',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await getOwnBooks()
+      return data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+    })
+  
+export const deleteOwnBookAsync = createAsyncThunk(
+  'books/deleteOwnBook',
+  async (credentials, thunkAPI) => {
+    try {
+      const { data } = await deleteOwnBook(credentials)
+      return data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+    )
