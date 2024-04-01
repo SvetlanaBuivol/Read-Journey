@@ -5,7 +5,7 @@ import Pagination from 'components/Pagination/Pagination';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBooks, getCurrentPage } from '../../../redux/books/booksSelectors';
 import { useMediaQuery } from 'react-responsive';
-import { getBooksPerPage } from 'helpers/getBooksPerPage/getBooksPerPage';
+import { getBooksPerPage } from 'helpers/books/getBooksPerPage';
 import { useEffect } from 'react';
 import { recommendedBooksAsync } from '../../../redux/books/booksOperations';
 import NoResults from '../../../components/NoResults/NoReasults';

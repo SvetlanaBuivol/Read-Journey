@@ -10,6 +10,7 @@ const Register = lazy(() => import('../pages/Register'));
 const Login = lazy(() => import('../pages/Login'));
 const Recommended = lazy(() => import('../pages/Recommended'));
 const Library = lazy(() => import('../pages/Library'));
+const Reading = lazy(() => import('../pages/Reading'));
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route index element={<Navigate to="recommended"/>}/>
         <Route path="recommended" element={<Recommended />} />
         <Route path="library" element={<Library />} />
+        <Route path="reading" element={<Reading />} />
       </Route>
     </Routes>
   );

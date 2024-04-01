@@ -26,10 +26,11 @@ const MyLibraryList = () => {
           {books.map(book => (
             <MyLibraryBookCard
               key={book._id}
-              image={book.imageUrl}
+              img={book.imageUrl}
               title={book.title}
               author={book.author}
               id={book._id}
+              totalPages={book.totalPages}
             />
           ))}
         </BooksList>

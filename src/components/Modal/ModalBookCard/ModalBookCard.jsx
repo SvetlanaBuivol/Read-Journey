@@ -8,15 +8,22 @@ import {
   Image,
   ModalContant,
   Pages,
-} from './ModalRecommended.styled';
+} from './ModalBookCard.styled';
 import { addBookByIdAsync } from '../../../redux/books/booksOperations';
+import { useNavigate } from 'react-router-dom';
 
-const ModalRecommended = ({ onClose, book }) => {
+const ModalBookCard = ({ onClose, book, myLibrary }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddBook = () => {
     dispatch(addBookByIdAsync(book.id));
     onClose();
+  };
+
+  const handleStartReading = () => {
+    onClose();
+    navigate(`/reading?bookId=${book.id}`);
   };
 
   return (
@@ -33,10 +40,13 @@ const ModalRecommended = ({ onClose, book }) => {
         <Author>{book.author}</Author>
         <Pages>{book.totalPages} pages</Pages>
       </BookCard>
-
-      <Button onClick={handleAddBook}>Add to library</Button>
+      {myLibrary ? (
+        <Button onClick={handleStartReading}>Start reading</Button>
+      ) : (
+        <Button onClick={handleAddBook}>Add to library</Button>
+      )}
     </ModalContant>
   );
 };
 
-export default ModalRecommended;
+export default ModalBookCard;
