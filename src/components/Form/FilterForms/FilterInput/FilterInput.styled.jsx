@@ -28,6 +28,7 @@ export const InputWrapper = styled.div`
 
     @media screen and (min-width: 768px) {
       font-size: 14px;
+      width: 87px;
     }
   }
 
