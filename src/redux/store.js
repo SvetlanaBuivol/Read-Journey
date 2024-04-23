@@ -16,20 +16,20 @@ import { booksReducer } from './books/booksSlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
-}
+  whitelist: ['token', 'refreshToken'],
+};
 
 export const store = configureStore({
-    reducer: {
+  reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-      books: booksReducer,
-    },
-    middleware: getDefaultMiddleware =>
+    books: booksReducer,
+  },
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-})
+});
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);

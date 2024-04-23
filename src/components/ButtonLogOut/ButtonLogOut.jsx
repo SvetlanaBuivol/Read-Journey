@@ -1,9 +1,9 @@
 import { useMediaQuery } from 'react-responsive';
 import PropTypes from 'prop-types';
-import { Button } from './ButtonLogOut.styled';
+import Notiflix from 'notiflix';
 import { useDispatch } from 'react-redux';
 import { signoutAsync } from '../../redux/auth/authOperations';
-import Notiflix from 'notiflix';
+import { Button } from './ButtonLogOut.styled';
 
 const ButtonLogOut = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -13,11 +13,16 @@ const ButtonLogOut = ({ onClose }) => {
     if (isMobile) {
       onClose();
     }
-    
-      dispatch(signoutAsync()).catch(error => {
-      Notiflix.Notify.failure('Oops! Something went wrong. Please try again')
-    })
-    
+    dispatch(signoutAsync())
+      .unwrap()
+      .catch(error => {
+        Notiflix.Notify.failure(
+          'Oops! Something went wrong. Please try again',
+          {
+            position: 'center-center',
+          }
+        );
+      });
   };
 
   return <Button onClick={handleLogOut}>Log out</Button>;

@@ -10,8 +10,7 @@ const FilterStartPage = ({id}) => {
 
   const onSubmit = ({ page }, actions) => {
        dispatch(startReadingBookAsync({  page, id }));
-        // console.log(page)
-        // actions.resetForm();
+
     }
   return (
     <div>

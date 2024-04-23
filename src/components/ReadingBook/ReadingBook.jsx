@@ -13,10 +13,10 @@ const ReadingBook = () => {
     <Wrapper>
       <PagesTitle title="My reading" />
       <BookCard>
-        <Image src={book.imageUrl} alt={book.title} />
+        <Image src={book.imageUrl || './images/ownDefaultImage.jpg'} alt={book.title} />
         <Title>{book.title}</Title>
         <Author>{book.author}</Author>
-        {bookStatus === 'active' ? (
+        {bookStatus.status === 'active' ? (
           <Svg>
             <use xlinkHref="./svg/svgSprite.svg#icon-active"></use>
           </Svg>

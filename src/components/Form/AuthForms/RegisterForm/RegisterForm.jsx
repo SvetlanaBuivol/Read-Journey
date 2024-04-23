@@ -13,7 +13,6 @@ const RegisterForm = () => {
 
   const onSubmit = (values, actions) => {
     dispatch(registerAsync(values));
-    console.log('onSubmit  values', values);
     actions.resetForm();
   };
   return (

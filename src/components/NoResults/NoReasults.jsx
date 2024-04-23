@@ -1,10 +1,10 @@
 import { Container, StyledImage } from "./NoResults.styled";
 
-const NoResults = () => {
+const NoResults = ({text}) => {
   return (
     <Container>
       <StyledImage src="./images/bookDefault.png" alt="No results" />
-      <p>Oops! Nothing found for your search query.<br/> Please try again</p>
+      <p dangerouslySetInnerHTML={{ __html: text}}/>
     </Container>
   );
 };

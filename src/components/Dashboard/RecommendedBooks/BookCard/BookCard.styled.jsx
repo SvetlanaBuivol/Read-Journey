@@ -10,6 +10,7 @@ export const Card = styled.li`
   img {
     border-radius: 8px;
     height: 107px;
+    width: 71px;
     margin-bottom: 8px;
   }
 

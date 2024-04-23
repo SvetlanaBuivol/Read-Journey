@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Author,
   BookCard,
@@ -9,15 +9,47 @@ import {
   ModalContant,
   Pages,
 } from './ModalBookCard.styled';
-import { addBookByIdAsync } from '../../../redux/books/booksOperations';
+import {
+  addBookByIdAsync,
+  getOwnBooksAsync,
+} from '../../../redux/books/booksOperations';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { getOwnBooks } from '../../../redux/books/booksSelectors';
+import Notiflix from 'notiflix';
 
 const ModalBookCard = ({ onClose, book, myLibrary }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const ownBooks = useSelector(getOwnBooks);
+  console.log('ModalBookCard  ownBooks', ownBooks);
+
+  useEffect(() => {
+    dispatch(getOwnBooksAsync());
+  }, [dispatch]);
 
   const handleAddBook = () => {
-    dispatch(addBookByIdAsync(book.id));
+    const existingBook = ownBooks.some(item => item.title === book.bookTitle);
+    if (ownBooks.length === 0 || !existingBook) {
+      dispatch(addBookByIdAsync(book.id))
+        .unwrap()
+        .then(() =>
+          Notiflix.Notify.success('Added to your library', {
+            position: 'center-center',
+          })
+        )
+        .catch(() =>
+          Notiflix.Notify.failure(
+            'OOps! Something went wrong. Please, try again',
+            { position: 'center-center' }
+          )
+        );
+    } else {
+      Notiflix.Notify.warning('This book is already in your library', {
+        position: 'center-center',
+      });
+    }
+
     onClose();
   };
 
@@ -35,7 +67,10 @@ const ModalBookCard = ({ onClose, book, myLibrary }) => {
       </CloseButton>
 
       <BookCard>
-        <Image src={book.img} alt="bookTitle" />
+        <Image
+          src={book.img || './images/ownDefaultImage.jpg'}
+          alt="bookTitle"
+        />
         <BookTitle>{book.bookTitle}</BookTitle>
         <Author>{book.author}</Author>
         <Pages>{book.totalPages} pages</Pages>

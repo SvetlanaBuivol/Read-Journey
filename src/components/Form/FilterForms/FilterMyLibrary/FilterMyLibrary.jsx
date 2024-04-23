@@ -4,18 +4,26 @@ import FilterInput from '../FilterInput/FilterInput';
 import FilterTitle from '../FilterTitle/FilterTitle';
 import { Button, InputWrapper } from './FilterMyLibrary.styled';
 import { addBookAsync } from '../../../../redux/books/booksOperations';
+import Notiflix from 'notiflix';
 
-const FilterMyLibrary = () => {
+const FilterMyLibrary = ({openModal}) => {
   const dispatch = useDispatch()
 
-  const onSubmit = ({title, author, pages}, actions) => {
-    dispatch(addBookAsync({
+  const onSubmit = ({ title, author, pages }, actions) => {
+    if (title && author && pages) {
+      dispatch(addBookAsync({
       title,
       author,
       totalPages: pages,
       }))
-        // console.log("onSubmit  values", values)
-        actions.resetForm();
+      actions.resetForm();
+      openModal()
+    } else {
+      Notiflix.Notify.warning('All fields must be filled', {
+        position: 'center-center'
+      })
+    }
+    
     }
   return (
     <div>

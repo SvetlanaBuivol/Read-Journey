@@ -1,7 +1,7 @@
-import { Title } from "./DashboardTitle.styled";
+import { Title } from './DashboardTitle.styled';
 
-const DashboardTitle = ({title}) => {
-    return <Title>{title}</Title>
-}
+const DashboardTitle = ({ title }) => {
+  return <Title>{title}</Title>;
+};
 
 export default DashboardTitle;

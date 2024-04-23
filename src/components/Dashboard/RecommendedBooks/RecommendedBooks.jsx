@@ -10,7 +10,7 @@ const RecommendedBooks = () => {
       <BooksList />
       <LinkWrapper>
         <StyledLink to={'/recommended'}>Home</StyledLink>
-        <Link to={'/library'}>
+        <Link to={'/recommended'}>
           <svg width={24} height={24}>
             <use xlinkHref="./svg/svgSprite.svg#icon-to"></use>
           </svg>

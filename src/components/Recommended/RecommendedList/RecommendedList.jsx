@@ -22,9 +22,7 @@ const RecommendedList = () => {
   const limit = getBooksPerPage({ isMobile, isTablet });
 
   useEffect(() => {
-    dispatch(recommendedBooksAsync({ limit, page: currentPage })).catch(() => {
-      console.log('fail');
-    });
+    dispatch(recommendedBooksAsync({ limit, page: currentPage }))
   }, [dispatch, limit, currentPage]);
 
   return (
@@ -42,7 +40,7 @@ const RecommendedList = () => {
             />
           </li>
         ))}
-      </BooksList>) : (<NoResults/>)
+      </BooksList>) : (<NoResults text='Oops! <span>Nothing found</span> for your search query. Please try again'/>)
       }
       <Pagination/>
     </Wrapper>

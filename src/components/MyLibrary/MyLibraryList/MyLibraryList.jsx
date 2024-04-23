@@ -6,6 +6,7 @@ import { getOwnBooks } from '../../../redux/books/booksSelectors';
 import MyLibraryBookCard from '../MyLibraryBookCard/MyLibraryBookCard';
 import { BooksList, Box, Wrapper } from './MyLibraryList.styled';
 import MyLibrarySelect from '../MyLibrarySelect/MyLibrarySelect';
+import NoResults from '../../../components/NoResults/NoReasults';
 
 const MyLibraryList = () => {
   const books = useSelector(getOwnBooks);
@@ -35,7 +36,7 @@ const MyLibraryList = () => {
           ))}
         </BooksList>
       ) : (
-        <p>Not found</p>
+        <NoResults text='To start training, <span>add some of your books</span> or from the recommended ones'/>
       )}
     </Wrapper>
   );

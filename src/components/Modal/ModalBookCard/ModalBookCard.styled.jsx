@@ -42,7 +42,7 @@ export const Image = styled.img`
   width: 140px;
   height: 213px;
   margin-bottom: 16px;
-  border-radius: 8px;
+  border-radius: 11px;
 
   @media screen and (min-width: 768px) {
     width: 153px;

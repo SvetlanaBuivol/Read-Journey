@@ -34,16 +34,18 @@ export const BookCard = styled.div`
 export const Image = styled.img`
   width: 137px;
   height: 208px;
-  border-radius: 8px;
+  border-radius: 11px;
 
   @media screen and (min-width: 768px) {
     width: 169px;
     height: 256px;
+     border-radius: 13px;
   }
 
   @media screen and (min-width: 1440px) {
     width: 224px;
     height: 340px;
+     border-radius: 17px;
   }
 `;
 

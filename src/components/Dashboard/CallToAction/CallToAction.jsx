@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import DashboardTitle from '../DashboardTitle/DashboardTitle';
 import {
   LinkWrapper,
   List,
@@ -7,8 +9,6 @@ import {
   Text,
   Wrapper,
 } from './CallToAction.styled';
-import DashboardTitle from '../DashboardTitle/DashboardTitle';
-import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   return (
