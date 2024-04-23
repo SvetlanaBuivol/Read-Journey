@@ -12,7 +12,7 @@ const Diary = () => {
   return (
     <List>
       {progress?.map(event => (
-          <DiaryEvent key={event._id} event={event} totalPages={totalPages} />
+        <DiaryEvent key={event._id} event={event} totalPages={totalPages} />
       ))}
     </List>
   );

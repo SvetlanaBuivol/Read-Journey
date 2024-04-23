@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import DashboardTitle from '../DashboardTitle/DashboardTitle';
-import {  Box, Navigation, Svg } from './Details.styled';
-import { useSelector } from 'react-redux';
-import { getReadingBook } from '../../../redux/books/booksSelectors';
+import { Box, Navigation, Svg } from './Details.styled';
 import Diary from './Diary/Diary';
 import Statistic from './Statistic/Statistic';
 
 const Details = () => {
-  const book = useSelector(getReadingBook);
   const [activeButton, setActiveButton] = useState('diary');
 
   const onStatisticClick = () => {

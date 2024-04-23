@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { colors, innerWrapper, textSize } from '../../../css/variables';
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: none;
@@ -11,8 +11,6 @@ export const Wrapper = styled.div`
     gap: 14px;
     width: 100%;
     padding: 15px 20px;
-    /* border-radius: 12px;
-    background-color: ${colors.mediumGrey}; */
 
     p {
       font-size: ${textSize.xxs};

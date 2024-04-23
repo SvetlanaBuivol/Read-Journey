@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getBooks } from '../../../../redux/books/booksSelectors';
 import { useEffect } from 'react';
+import { getBooks } from '../../../../redux/books/booksSelectors';
 import { recommendedBooksAsync } from '../../../../redux/books/booksOperations';
 import BookCard from '../BookCard/BookCard';
 import { List } from './BooksList.styled';

@@ -1,5 +1,5 @@
-import { colors, textSize } from '../../../../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize } from '../../../../../css/variables';
 
 export const Line = styled.div`
   position: absolute;

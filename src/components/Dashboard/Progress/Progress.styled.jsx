@@ -1,5 +1,5 @@
-import { colors, textSize } from '../../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize } from '../../../css/variables';
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1439px) {

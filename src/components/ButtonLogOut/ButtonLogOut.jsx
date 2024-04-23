@@ -15,7 +15,7 @@ const ButtonLogOut = ({ onClose }) => {
     }
     dispatch(signoutAsync())
       .unwrap()
-      .catch(error => {
+      .catch(() => {
         Notiflix.Notify.failure(
           'Oops! Something went wrong. Please try again',
           {

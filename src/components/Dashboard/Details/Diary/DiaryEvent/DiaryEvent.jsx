@@ -21,17 +21,25 @@ import Notiflix from 'notiflix';
 
 const DiaryEvent = ({ event, totalPages }) => {
   const book = useSelector(getReadingBook);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteReadingEventAsync({ bookId: book._id, readingId: event._id })).unwrap().catch(error => Notiflix.Notify.warning('Oops! Somethimg went wrong. Please, try again', {
-      position: 'center-center',
-    }))
-  }
+    dispatch(
+      deleteReadingEventAsync({ bookId: book._id, readingId: event._id })
+    )
+      .unwrap()
+      .catch(() =>
+        Notiflix.Notify.warning(
+          'Oops! Somethimg went wrong. Please, try again',
+          {
+            position: 'center-center',
+          }
+        )
+      );
+  };
 
-  return (
-      event.finishReading ? 
-        (<Event>
+  return event.finishReading ? (
+    <Event>
       <Line></Line>
       <div>
         <Data>{formatDate(event.finishReading)}</Data>
@@ -49,18 +57,14 @@ const DiaryEvent = ({ event, totalPages }) => {
           <Speed>{event.speed} pages per hour</Speed>
         </Container>
 
-          <button
-            onClick={handleDelete}
-          >
-        <svg width={14} height={14}>
-          <use xlinkHref="./svg/svgSprite.svg#icon-trashGrey"></use>
-            </svg>
-            </button>
+        <button onClick={handleDelete}>
+          <svg width={14} height={14}>
+            <use xlinkHref="./svg/svgSprite.svg#icon-trashGrey"></use>
+          </svg>
+        </button>
       </Box>
-    </Event>) : null
-    
-    
-  );
+    </Event>
+  ) : null;
 };
 
 export default DiaryEvent;

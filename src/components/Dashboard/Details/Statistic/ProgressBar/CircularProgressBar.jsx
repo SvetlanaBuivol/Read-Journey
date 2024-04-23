@@ -1,10 +1,3 @@
-// const Statistic = () => {
-//     return (
-//       <div>Statistic</div>
-//   )
-// }
-// export default Statistic
-
 import { useState, useEffect } from 'react';
 import {
   BackgroundCircle,

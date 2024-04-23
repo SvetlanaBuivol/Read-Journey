@@ -1,5 +1,5 @@
-import { colors, textSize } from '../../../../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize } from '../../../../../css/variables';
 
 export const CircleContainer = styled.div`
   position: relative;
@@ -18,8 +18,8 @@ export const CircleContainer = styled.div`
 `;
 
 export const CircleSVG = styled.svg`
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 `;
@@ -49,4 +49,4 @@ export const Text = styled.text`
   @media screen and (min-width: 768px) {
     font-size: ${textSize.m};
   }
-`
+`;

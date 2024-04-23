@@ -1,5 +1,5 @@
-import { colors } from '../../../../css/variables';
 import styled from 'styled-components';
+import { colors } from '../../../../css/variables';
 
 export const List = styled.ul`
   position: relative;
