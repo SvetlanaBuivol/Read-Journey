@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
    };
 
    &.container {
-    /* width: 80%; */
     background-color: ${colors.lightGrey};
    }
 `;

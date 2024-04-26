@@ -1,4 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import Notiflix from 'notiflix';
 import {
   Author,
   BookCard,
@@ -13,10 +16,7 @@ import {
   addBookByIdAsync,
   getOwnBooksAsync,
 } from '../../../redux/books/booksOperations';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import { getOwnBooks } from '../../../redux/books/booksSelectors';
-import Notiflix from 'notiflix';
 
 const ModalBookCard = ({ onClose, book, myLibrary }) => {
   const dispatch = useDispatch();

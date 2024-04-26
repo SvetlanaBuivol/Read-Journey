@@ -1,5 +1,5 @@
-import { colors, innerWrapper, textSize } from '../../../css/variables';
 import styled from 'styled-components';
+import { colors, innerWrapper, textSize } from '../../../css/variables';
 
 export const Wrapper = styled.div`
   display: none;

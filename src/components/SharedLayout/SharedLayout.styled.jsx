@@ -19,7 +19,7 @@ export const ContainerOutlet = styled.div`
   @media screen and (min-width: 768px) {
     padding-top: 0;
   }
-`
+`;
 
 export const HeaderWrapper = styled.div`
   ${wrapperMixin}

@@ -1,18 +1,17 @@
-import { useState } from "react";
-import MobileMenuModal from '../Modal/MobileMenuModal/MobileMenuModal'
-import ModalPortal from "components/Modal/ModalPortal/ModalPortal";
-
+import { useState } from 'react';
+import MobileMenuModal from '../Modal/MobileMenuModal/MobileMenuModal';
+import ModalPortal from '../../components/Modal/ModalPortal/ModalPortal';
 
 const MobileMenu = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleOpenModal = () => {
-    setModalIsOpen(true)
-  }
+    setModalIsOpen(true);
+  };
 
   const closeModal = () => {
-    setModalIsOpen(false)
-  }
+    setModalIsOpen(false);
+  };
   return (
     <>
       <button type="button" onClick={handleOpenModal}>
@@ -21,7 +20,9 @@ const MobileMenu = () => {
         </svg>
       </button>
 
-      <ModalPortal isOpen={modalIsOpen} ><MobileMenuModal onClose={closeModal}/></ModalPortal>
+      <ModalPortal isOpen={modalIsOpen}>
+        <MobileMenuModal onClose={closeModal} />
+      </ModalPortal>
     </>
   );
 };

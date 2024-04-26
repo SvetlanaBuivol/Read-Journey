@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import Select from 'react-select';
-import { customStyles } from './MyLibrarySelect.styled';
 import { useDispatch } from 'react-redux';
+import { customStyles } from './MyLibrarySelect.styled';
 import { getOwnBooksAsync } from '../../../redux/books/booksOperations';
 
 const MyLibrarySelect = () => {
-    const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [selectedOption, setSelectedOption] = useState('All books');
 
   const options = [
@@ -16,8 +16,8 @@ const MyLibrarySelect = () => {
   ];
 
   const handleChange = selectedOption => {
-      setSelectedOption(selectedOption);
-      dispatch(getOwnBooksAsync(selectedOption.value))
+    setSelectedOption(selectedOption);
+    dispatch(getOwnBooksAsync(selectedOption.value));
   };
   return (
     <div>

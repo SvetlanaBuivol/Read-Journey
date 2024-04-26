@@ -4,10 +4,10 @@ import { LinkList, StyledLink } from './UserNav.styled';
 
 const UserNav = ({ onClose }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
-  
+
   const handleCloseModal = () => {
     if (isMobile) {
-      onClose()
+      onClose();
     }
   };
 
@@ -20,7 +20,9 @@ const UserNav = ({ onClose }) => {
           </StyledLink>
         </li>
         <li>
-          <StyledLink onClick={handleCloseModal} to={'library'}>My library</StyledLink>
+          <StyledLink onClick={handleCloseModal} to={'library'}>
+            My library
+          </StyledLink>
         </li>
       </LinkList>
     </nav>

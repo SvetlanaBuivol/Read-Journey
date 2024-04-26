@@ -1,5 +1,5 @@
-import { colors, textSize, wrapperMixin } from '../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize, wrapperMixin } from '../../css/variables';
 
 export const Wrapper = styled.div`
   ${wrapperMixin}
@@ -39,13 +39,13 @@ export const Image = styled.img`
   @media screen and (min-width: 768px) {
     width: 169px;
     height: 256px;
-     border-radius: 13px;
+    border-radius: 13px;
   }
 
   @media screen and (min-width: 1440px) {
     width: 224px;
     height: 340px;
-     border-radius: 17px;
+    border-radius: 17px;
   }
 `;
 

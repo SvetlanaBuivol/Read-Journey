@@ -1,10 +1,10 @@
-import { Container, StyledImage } from "./NoResults.styled";
+import { Container, StyledImage } from './NoResults.styled';
 
-const NoResults = ({text}) => {
+const NoResults = ({ text }) => {
   return (
     <Container>
       <StyledImage src="./images/bookDefault.png" alt="No results" />
-      <p dangerouslySetInnerHTML={{ __html: text}}/>
+      <p dangerouslySetInnerHTML={{ __html: text }} />
     </Container>
   );
 };

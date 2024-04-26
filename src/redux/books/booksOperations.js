@@ -36,8 +36,8 @@ export const addBookByIdAsync = createAsyncThunk(
   'books/addById',
   async (credentials, thunkAPI) => {
     try {
-      const {data} = await addBookById(credentials);
-      return data
+      const { data } = await addBookById(credentials);
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data.message);
     }
@@ -99,7 +99,7 @@ export const stopReadingBookAsync = createAsyncThunk(
       const { data } = await stopReadingBook(credentials);
       return data;
     } catch (error) {
-      console.log("error", error)
+      console.log('error', error);
       return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }

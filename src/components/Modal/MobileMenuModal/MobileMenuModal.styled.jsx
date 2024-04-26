@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { backdropMixin, colors } from '../../../css/variables';
 
 export const Backdrop = styled.div`
- ${backdropMixin}
+  ${backdropMixin}
   justify-content: flex-end;
 `;
 

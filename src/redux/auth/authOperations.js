@@ -69,25 +69,24 @@ export const getCurrentUserAsync = createAsyncThunk(
 export const refreshTokenAsync = createAsyncThunk(
   'auth/refreshToken',
   async (_, thunkAPI) => {
-
     const state = thunkAPI.getState();
     const persistedToken = state.auth.refreshToken;
 
     if (persistedToken === null) {
       // return thunkAPI.rejectWithValue();
-      throw new Error('No refresh token')
+      throw new Error('No refresh token');
     }
 
     token.set(persistedToken);
 
     try {
-      const {data} = await refreshToken();
+      const { data } = await refreshToken();
 
       const newToken = data.token;
       token.set(newToken);
-      return data
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
-    } 
+    }
   }
 );

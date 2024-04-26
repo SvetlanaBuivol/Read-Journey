@@ -57,9 +57,9 @@ const Reading = () => {
 
       <ModalPortal isOpen={modalIsOpen}>
         <ModalBackdrop onClose={closeModal}>
-          <ModalEndReading onClose={closeModal}/>
+          <ModalEndReading onClose={closeModal} />
         </ModalBackdrop>
-        </ModalPortal>
+      </ModalPortal>
     </>
   );
 };

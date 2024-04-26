@@ -1,5 +1,5 @@
-import { wrapperMixin } from 'css/variables';
 import styled from 'styled-components';
+import { wrapperMixin } from 'css/variables';
 
 export const Wrapper = styled.div`
   ${wrapperMixin}

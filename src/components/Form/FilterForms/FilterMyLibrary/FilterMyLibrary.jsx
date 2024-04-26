@@ -1,34 +1,38 @@
 import { useDispatch } from 'react-redux';
+import Notiflix from 'notiflix';
 import FilterForm from '../FilterForm/FilterForm';
 import FilterInput from '../FilterInput/FilterInput';
 import FilterTitle from '../FilterTitle/FilterTitle';
 import { Button, InputWrapper } from './FilterMyLibrary.styled';
 import { addBookAsync } from '../../../../redux/books/booksOperations';
-import Notiflix from 'notiflix';
 
-const FilterMyLibrary = ({openModal}) => {
-  const dispatch = useDispatch()
+const FilterMyLibrary = ({ openModal }) => {
+  const dispatch = useDispatch();
 
   const onSubmit = ({ title, author, pages }, actions) => {
     if (title && author && pages) {
-      dispatch(addBookAsync({
-      title,
-      author,
-      totalPages: pages,
-      }))
+      dispatch(
+        addBookAsync({
+          title,
+          author,
+          totalPages: pages,
+        })
+      );
       actions.resetForm();
-      openModal()
+      openModal();
     } else {
       Notiflix.Notify.warning('All fields must be filled', {
-        position: 'center-center'
-      })
+        position: 'center-center',
+      });
     }
-    
-    }
+  };
   return (
     <div>
       <FilterTitle title="Create your library:" />
-      <FilterForm onSubmit={onSubmit} initialValues={{ title: '', author: '', pages: '' }}>
+      <FilterForm
+        onSubmit={onSubmit}
+        initialValues={{ title: '', author: '', pages: '' }}
+      >
         <InputWrapper>
           <FilterInput
             label="Book title:"

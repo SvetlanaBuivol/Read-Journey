@@ -1,8 +1,8 @@
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ButtonLogOut from '../../ButtonLogOut/ButtonLogOut';
 import UserNav from '../../UserNav/UserNav';
 import { Backdrop, Modal } from './MobileMenuModal.styled';
-import { useEffect } from 'react';
 
 const MobileMenuModal = ({ onClose }) => {
   const handleKeyDown = event => {

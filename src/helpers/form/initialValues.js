@@ -1,16 +1,16 @@
 export const initialRegisterValues = {
-    name: '',
-    email: '',
-    password: '',
-}
+  name: '',
+  email: '',
+  password: '',
+};
 
 export const initialLoginValues = {
-    email: '',
-    password: '',
-}
+  email: '',
+  password: '',
+};
 
 export const initialFilterValues = {
-    title: '',
-    author: '',
-    page: null,
-}
+  title: '',
+  author: '',
+  page: null,
+};

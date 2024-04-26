@@ -4,9 +4,11 @@ import { refreshTokenAsync } from '../redux/auth/authOperations';
 
 axios.interceptors.response.use(
   response => {
+    console.log("response", response)
     return response;
   },
   async error => {
+    console.log("error", error)
     const originalRequest = error.config;
 
     if (
@@ -15,6 +17,7 @@ axios.interceptors.response.use(
       !originalRequest._retry &&
       originalRequest.url !== '/users/current/refresh'
     ) {
+      console.log('if Block')
       originalRequest._retry = true;
 
       try {

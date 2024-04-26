@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import { readingTime } from '../../../../../helpers/books/readingTime';
 import { calculatePercentage } from '../../../../../helpers/books/calculatePercentage';
 import { formatDate } from '../../../../../helpers/books/formatDate';
@@ -17,7 +18,6 @@ import { readPages } from '../../../../../helpers/books/readPages';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteReadingEventAsync } from '../../../../../redux/books/booksOperations';
 import { getReadingBook } from '../../../../../redux/books/booksSelectors';
-import Notiflix from 'notiflix';
 
 const DiaryEvent = ({ event, totalPages }) => {
   const book = useSelector(getReadingBook);

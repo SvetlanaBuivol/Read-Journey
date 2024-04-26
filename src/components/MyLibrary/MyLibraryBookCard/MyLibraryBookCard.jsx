@@ -1,20 +1,27 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import Notiflix from 'notiflix';
 import { BookInfo, BookInfoBox, Card, Image } from './MyLibraryBookCard.styled';
 import { deleteOwnBookAsync } from '../../../redux/books/booksOperations';
 import ModalPortal from '../../../components/Modal/ModalPortal/ModalPortal';
 import ModalBackdrop from '../../../components/Modal/ModalBackdrop/ModalBackdrop';
 import ModalBookCard from '../../Modal/ModalBookCard/ModalBookCard';
-import { useState } from 'react';
-import Notiflix from 'notiflix';
 
 const MyLibraryBookCard = ({ img, title, author, id, totalPages }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const dispatch = useDispatch();
 
   const handleDeleteBook = () => {
-    dispatch(deleteOwnBookAsync(id)).unwrap().catch(error => Notiflix.Notify.warning('Oops! Somethimg went wrong. Please, try again', {
-      position: 'center-center',
-    }));
+    dispatch(deleteOwnBookAsync(id))
+      .unwrap()
+      .catch(error =>
+        Notiflix.Notify.warning(
+          'Oops! Somethimg went wrong. Please, try again',
+          {
+            position: 'center-center',
+          }
+        )
+      );
   };
 
   const handleOpenModal = () => {

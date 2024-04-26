@@ -1,5 +1,5 @@
-import { colors, textSize } from '../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize } from '../../css/variables';
 
 export const Container = styled.div`
   display: flex;
@@ -20,10 +20,9 @@ export const Container = styled.div`
       color: ${colors.white};
     }
 
-@media screen and (min-width: 768px) {
-     width: 274px;
-  }
-
+    @media screen and (min-width: 768px) {
+      width: 274px;
+    }
   }
 `;
 export const StyledImage = styled.img`

@@ -1,5 +1,5 @@
-import { colors } from "../../../../css/variables";
-import styled from "styled-components";
+import styled from 'styled-components';
+import { colors } from '../../../../css/variables';
 
 export const InputWrapper = styled.div`
   display: flex;
@@ -8,19 +8,7 @@ export const InputWrapper = styled.div`
   border-radius: 12px;
   background-color: ${colors.mediumGrey};
 
-  /* ${props =>
-    props.$error &&
-    `
-    border: 1px solid ${colors.red};
-   `}
-
-  ${props =>
-    props.$valid &&
-    `
-    border: 1px solid ${colors.green};
-   `} */
-
-   label {
+  label {
     margin-right: 10px;
     line-height: 1.3;
     letter-spacing: -0.02em;
@@ -38,10 +26,9 @@ export const InputWrapper = styled.div`
 `;
 
 export const Input = styled.input`
-flex: 1;
+  flex: 1;
   line-height: 1.3;
   letter-spacing: -0.02em;
-  /* width: 100%; */
 
   &::placeholder {
     color: ${colors.white};

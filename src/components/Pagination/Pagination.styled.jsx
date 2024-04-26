@@ -21,12 +21,12 @@ export const Button = styled.button`
   border-radius: 50%;
   border: 1px solid ${colors.transparentWhite};
 
-
   svg {
     width: 16px;
     height: 16px;
     fill: transparent;
-    stroke: ${props => (props.disabled ? `${colors.transparentWhite}` : `${colors.white}`)} ;
+    stroke: ${props =>
+      props.disabled ? `${colors.transparentWhite}` : `${colors.white}`};
 
     @media screen and (min-width: 768px) {
       width: 20px;

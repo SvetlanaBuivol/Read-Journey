@@ -9,16 +9,16 @@ import { goToNextPage, goToPrevPage } from '../../redux/books/booksSlice';
 
 const Pagination = () => {
   const currentPage = useSelector(getCurrentPage);
-    const totalPages = useSelector(getTotalPages);
-    const isLoading = useSelector(getIsLoading)
+  const totalPages = useSelector(getTotalPages);
+  const isLoading = useSelector(getIsLoading);
   const dispatch = useDispatch();
 
   const handleNextPage = () => {
-      dispatch(goToNextPage())
+    dispatch(goToNextPage());
   };
 
   const handlePrevPage = () => {
-      dispatch(goToPrevPage())
+    dispatch(goToPrevPage());
   };
 
   return (

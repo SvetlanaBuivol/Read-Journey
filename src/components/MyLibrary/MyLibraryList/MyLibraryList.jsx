@@ -19,9 +19,9 @@ const MyLibraryList = () => {
   return (
     <Wrapper>
       <Box>
-      <PagesTitle title="My library" />
+        <PagesTitle title="My library" />
         <MyLibrarySelect />
-        </Box>
+      </Box>
       {books.length ? (
         <BooksList>
           {books.map(book => (
@@ -36,7 +36,7 @@ const MyLibraryList = () => {
           ))}
         </BooksList>
       ) : (
-        <NoResults text='To start training, <span>add some of your books</span> or from the recommended ones'/>
+        <NoResults text="To start training, <span>add some of your books</span> or from the recommended ones" />
       )}
     </Wrapper>
   );

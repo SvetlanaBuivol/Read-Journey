@@ -1,7 +1,13 @@
-import { CloseButton, Image, ModalContant, Text, Title } from "./ModalEndReading.styled";
+import {
+  CloseButton,
+  Image,
+  ModalContant,
+  Text,
+  Title,
+} from './ModalEndReading.styled';
 
-const ModalEndReading = ({onClose}) => {
-    return (
+const ModalEndReading = ({ onClose }) => {
+  return (
     <ModalContant>
       <CloseButton type="button" onClick={onClose}>
         <svg width={28} height={28}>
@@ -11,10 +17,11 @@ const ModalEndReading = ({onClose}) => {
       <Image src="./images/books.png" alt="great" />
       <Title>The book is read</Title>
       <Text>
-        It was an <span>exciting journey</span>, where each page revealed new horizons, and the characters became inseparable friends.
+        It was an <span>exciting journey</span>, where each page revealed new
+        horizons, and the characters became inseparable friends.
       </Text>
     </ModalContant>
   );
-}
+};
 
-export default ModalEndReading
+export default ModalEndReading;

@@ -14,25 +14,47 @@ const Library = lazy(() => import('../pages/Library'));
 const Reading = lazy(() => import('../pages/Reading'));
 
 function App() {
-  const dispatch = useDispatch()
-  const isRefreshing = useSelector(getRefreshingUser)
+  const dispatch = useDispatch();
+  const isRefreshing = useSelector(getRefreshingUser);
 
   useEffect(() => {
-    dispatch(getCurrentUserAsync())
-  }, [dispatch])
+    dispatch(getCurrentUserAsync());
+  }, [dispatch]);
 
   return (
-    isRefreshing ||
-    <Routes>
-      <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
-      <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
-      <Route path="/" element={<PrivateRoute><SharedLayout/></PrivateRoute>}>
-        <Route index element={<Navigate to="recommended"/>}/>
-        <Route path="recommended" element={<Recommended />} />
-        <Route path="library" element={<Library />} />
-        <Route path="reading" element={<Reading />} />
-      </Route>
-    </Routes>
+    isRefreshing || (
+      <Routes>
+        <Route
+          path="/register"
+          element={
+            <PublicRoute>
+              <Register />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <PublicRoute>
+              <Login />
+            </PublicRoute>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <SharedLayout />
+            </PrivateRoute>
+          }
+        >
+          <Route index element={<Navigate to="recommended" />} />
+          <Route path="recommended" element={<Recommended />} />
+          <Route path="library" element={<Library />} />
+          <Route path="reading" element={<Reading />} />
+        </Route>
+      </Routes>
+    )
   );
 }
 

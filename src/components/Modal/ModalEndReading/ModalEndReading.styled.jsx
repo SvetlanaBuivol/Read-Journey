@@ -1,5 +1,5 @@
-import { colors, textSize } from '../../../css/variables';
 import styled from 'styled-components';
+import { colors, textSize } from '../../../css/variables';
 
 export const ModalContant = styled.div`
   position: relative;
@@ -31,35 +31,35 @@ export const CloseButton = styled.button`
 `;
 
 export const Image = styled.img`
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 68px;
     height: 70px;
     margin-bottom: 32px;
   }
-`
+`;
 
 export const Title = styled.h2`
-    font-family: 'Gilroy-Bold';
-    font-size: ${textSize.s};
-    letter-spacing: -0.02em;
-    margin-bottom: 10px;
+  font-family: 'Gilroy-Bold';
+  font-size: ${textSize.s};
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: ${textSize.m};
     margin-bottom: 14px;
   }
-`
+`;
 
 export const Text = styled.p`
-    font-size: ${textSize.xxs};
-    color: ${colors.lightGrey};
-    letter-spacing: -0.02em;
+  font-size: ${textSize.xxs};
+  color: ${colors.lightGrey};
+  letter-spacing: -0.02em;
 
-    span{
-        color: ${colors.white};
-    }
-`
+  span {
+    color: ${colors.white};
+  }
+`;
