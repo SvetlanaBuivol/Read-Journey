@@ -18,10 +18,9 @@ axios.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        console.log('Refreshing token...');
         const refreshResponse = await store.dispatch(refreshTokenAsync());
         if (refreshResponse.meta.requestStatus === 'fulfilled') {
-          originalRequest.headers.Authorization = `Bearer ${refreshResponse.payload.token}`
+          originalRequest.headers.Authorization = `Bearer ${refreshResponse.payload.token}`;
           return axios(originalRequest);
         } else {
           return Promise.reject(refreshResponse.error);

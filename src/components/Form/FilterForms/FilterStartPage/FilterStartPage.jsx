@@ -4,12 +4,13 @@ import FilterInput from '../FilterInput/FilterInput';
 import FilterTitle from '../FilterTitle/FilterTitle';
 import { Button, InputWrapper } from './FilterStartPage.styled';
 import { startReadingBookAsync } from '../../../../redux/books/booksOperations';
+import Notiflix from 'notiflix';
 
 const FilterStartPage = ({id}) => {
    const dispatch = useDispatch();
 
   const onSubmit = ({ page }, actions) => {
-       dispatch(startReadingBookAsync({  page, id }));
+       dispatch(startReadingBookAsync({  page, id })).unwrap().catch(error => Notiflix.Notify.failure(`${error}`, {position: 'center-center'}));
 
     }
   return (

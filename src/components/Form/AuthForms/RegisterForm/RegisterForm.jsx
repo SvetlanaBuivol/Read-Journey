@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import Notiflix from 'notiflix';
 import CustomInput from '../CustomInput/CustomInput';
 import { validationRegisterSchema } from '../../../../helpers/form/validationSchema';
 import { initialRegisterValues } from '../../../../helpers/form/initialValues';
@@ -5,14 +7,17 @@ import AuthLink from '../AuthLink/AuthLink';
 import { AuthButtonsWrapper, InputWrapper } from './RegisterForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
 import AuthForm from '../AuthForm/AuthForm';
-import { useDispatch } from 'react-redux';
 import { registerAsync } from '../../../../redux/auth/authOperations';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (values, actions) => {
-    dispatch(registerAsync(values));
+    dispatch(registerAsync(values))
+      .unwrap()
+      .catch(error =>
+        Notiflix.Notify.failure(`${error}`, { position: 'center-center' })
+      );
     actions.resetForm();
   };
   return (
@@ -42,7 +47,7 @@ const RegisterForm = () => {
         />
       </InputWrapper>
       <AuthButtonsWrapper>
-        <AuthButton text='Registration' $register/>
+        <AuthButton text="Registration" $register />
         <AuthLink page="login" text="Already have an account?" />
       </AuthButtonsWrapper>
     </AuthForm>

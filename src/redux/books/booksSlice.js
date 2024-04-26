@@ -17,7 +17,7 @@ const initialState = {
   currentPage: 1,
   totalPages: 0,
   isLoading: false,
-  isError: null,
+  // isError: null,
 };
 
 const booksSlice = createSlice({
@@ -38,7 +38,7 @@ const booksSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(recommendedBooksAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(recommendedBooksAsync.fulfilled, (state, action) => {
       state.books = action.payload.results;
@@ -48,11 +48,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(recommendedBooksAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(addBookAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(addBookAsync.fulfilled, (state, action) => {
       state.ownBooks.push(action.payload);
@@ -60,11 +60,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(addBookAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(getOwnBooksAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(getOwnBooksAsync.fulfilled, (state, action) => {
       state.ownBooks = action.payload;
@@ -72,11 +72,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(getOwnBooksAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(deleteOwnBookAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(deleteOwnBookAsync.fulfilled, (state, action) => {
       state.ownBooks = state.ownBooks.filter(
@@ -86,11 +86,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(deleteOwnBookAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(startReadingBookAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(startReadingBookAsync.fulfilled, (state, action) => {
       state.readingBook = action.payload;
@@ -98,11 +98,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(startReadingBookAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(stopReadingBookAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(stopReadingBookAsync.fulfilled, (state, action) => {
       state.readingBook = action.payload;
@@ -110,11 +110,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(stopReadingBookAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(getBookByIdAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(getBookByIdAsync.fulfilled, (state, action) => {
       state.readingBook = action.payload;
@@ -122,11 +122,11 @@ const booksSlice = createSlice({
     });
     builder.addCase(getBookByIdAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
     builder.addCase(deleteReadingEventAsync.pending, (state, action) => {
       state.isLoading = true;
-      state.isError = null;
+      // state.isError = null;
     });
     builder.addCase(deleteReadingEventAsync.fulfilled, (state, action) => {
       state.readingBook = action.payload;
@@ -134,7 +134,7 @@ const booksSlice = createSlice({
     });
     builder.addCase(deleteReadingEventAsync.rejected, (state, action) => {
       state.isLoading = false;
-      state.isError = action.payload;
+      // state.isError = action.payload;
     });
   },
 });

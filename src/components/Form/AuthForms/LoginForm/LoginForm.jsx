@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import Notiflix from 'notiflix';
 import CustomInput from '../CustomInput/CustomInput';
 import { validationLoginSchema } from '../../../../helpers/form/validationSchema';
 import { initialLoginValues } from '../../../../helpers/form/initialValues';
@@ -5,14 +7,19 @@ import AuthLink from '../AuthLink/AuthLink';
 import { AuthButtonsWrapper, InputWrapper } from './LoginForm.styled';
 import AuthButton from '../AuthButton/AuthButton';
 import AuthForm from '../AuthForm/AuthForm';
-import { useDispatch } from 'react-redux';
 import { loginAsync } from '../../../../redux/auth/authOperations';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (values, actions) => {
-    dispatch(loginAsync(values));
+    dispatch(loginAsync(values))
+      .unwrap()
+      .catch(() =>
+        Notiflix.Notify.failure('Please, check your email or password', {
+          position: 'center-center',
+        })
+      );
     actions.resetForm();
   };
 

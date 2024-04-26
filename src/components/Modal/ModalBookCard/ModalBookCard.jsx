@@ -22,7 +22,6 @@ const ModalBookCard = ({ onClose, book, myLibrary }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const ownBooks = useSelector(getOwnBooks);
-  console.log('ModalBookCard  ownBooks', ownBooks);
 
   useEffect(() => {
     dispatch(getOwnBooksAsync());

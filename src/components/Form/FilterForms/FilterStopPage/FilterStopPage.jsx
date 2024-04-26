@@ -5,14 +5,14 @@ import FilterForm from "../FilterForm/FilterForm";
 import { Button, InputWrapper } from "./FilterStopPage.styled";
 import FilterInput from "../FilterInput/FilterInput";
 import { getReadingBook } from "../../../../redux/books/booksSelectors";
+import Notiflix from "notiflix";
 
 const FilterStopPage = ({ id, openModal }) => {
   const {totalPages} = useSelector(getReadingBook)
-    console.log("FilterStopPage  totalPages", totalPages)
     const dispatch = useDispatch();
 
   const onSubmit = ({ page }, actions) => {
-    dispatch(stopReadingBookAsync({ page, id }));
+    dispatch(stopReadingBookAsync({ page, id })).unwrap().catch((error) => Notiflix.Notify.failure(`${error}`, {position: 'center-center'}));
     if (+page === totalPages) {
       openModal()
     }

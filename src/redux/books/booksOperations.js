@@ -27,7 +27,7 @@ export const recommendedBooksAsync = createAsyncThunk(
       if (page > data.totalPages) page = 1;
       return { ...data, page };
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -39,7 +39,7 @@ export const addBookByIdAsync = createAsyncThunk(
       const {data} = await addBookById(credentials);
       return data
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -51,7 +51,7 @@ export const addBookAsync = createAsyncThunk(
       const { data } = await addBook(credentials);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -63,7 +63,7 @@ export const getOwnBooksAsync = createAsyncThunk(
       const { data } = await getOwnBooks(credentials);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -75,7 +75,7 @@ export const deleteOwnBookAsync = createAsyncThunk(
       const { data } = await deleteOwnBook(credentials);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -87,7 +87,7 @@ export const startReadingBookAsync = createAsyncThunk(
       const { data } = await startReadingBook(credentials);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -99,7 +99,8 @@ export const stopReadingBookAsync = createAsyncThunk(
       const { data } = await stopReadingBook(credentials);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      console.log("error", error)
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -111,7 +112,7 @@ export const getBookByIdAsync = createAsyncThunk(
       const { data } = await getBookById(id);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -124,7 +125,7 @@ export const deleteReadingEventAsync = createAsyncThunk(
       const { data } = await deleteReadingEvent(queryString);
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.status);
+      return thunkAPI.rejectWithValue(error.response.data.message);
     }
   }
 );

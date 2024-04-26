@@ -9,16 +9,16 @@ const AuthForm = ({ initialValues, validationSchema, onSubmit, children }) => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {() => <StyledForm autoComplete='off'>{children}</StyledForm>}
+      {() => <StyledForm autoComplete="off">{children}</StyledForm>}
     </Formik>
   );
 };
 
 AuthForm.propTypes = {
-    initialValues: PropTypes.object.isRequired,
-    validationSchema: PropTypes.object.isRequired,
-    onSubmit: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired,
-}
+  initialValues: PropTypes.object.isRequired,
+  validationSchema: PropTypes.object.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default AuthForm;

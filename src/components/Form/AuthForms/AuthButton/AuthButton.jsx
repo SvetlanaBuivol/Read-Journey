@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
-import { Button } from "./AuthButton.styled";
+import { Button } from './AuthButton.styled';
 
 const AuthButton = ({ text, ...props }) => {
-    return (
-        <Button type="submit" {...props}>{text}</Button>
-   )
-}
+  return (
+    <Button type="submit" {...props}>
+      {text}
+    </Button>
+  );
+};
 
 AuthButton.propTypes = {
-    text: PropTypes.string.isRequired,
-}
+  text: PropTypes.string.isRequired,
+};
 
 export default AuthButton;

@@ -16,5 +16,4 @@ export const InputWrapper = styled.div`
 
 export const AuthButtonsWrapper = styled.div`
   ${authButtonWrapperMixin}
-  
 `;
