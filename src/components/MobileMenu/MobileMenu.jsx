@@ -17,7 +17,7 @@ const MobileMenu = () => {
     <>
       <button type="button" onClick={handleOpenModal}>
         <svg width={28} height={28}>
-          <use xlinkHref="/svg/svgSprite.svg#icon-menu"></use>
+          <use xlinkHref="./svg/svgSprite.svg#icon-menu"></use>
         </svg>
       </button>
 

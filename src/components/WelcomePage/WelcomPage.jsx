@@ -2,22 +2,24 @@ import { Wrapper } from './WelcomePage.styled';
 import PropTypes from 'prop-types';
 import Logo from '../Logo/Logo';
 import GrittingTitle from '../GrittingTitle/GritingTitle';
-// import RegisterForm from '../Form/RegisterForm/RegisterForm';
+import MediaQuery from 'react-responsive';
+import LogoText from '../../components/Logo/LogoText';
 
-const WelcomPage = ({children}) => {
+const WelcomPage = ({ children }) => {
   return (
-    
-      <Wrapper>
-        <Logo $hide />
-        <GrittingTitle />
-        {children}
-      </Wrapper>
-    
+    <Wrapper>
+      <MediaQuery maxWidth={767}>
+        {matches => (matches ? <Logo /> : <LogoText />)}
+      </MediaQuery>
+
+      <GrittingTitle />
+      {children}
+    </Wrapper>
   );
 };
 
 WelcomPage.propTypes = {
-    children: PropTypes.node
-}
+  children: PropTypes.node,
+};
 
 export default WelcomPage;
