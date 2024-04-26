@@ -10,9 +10,10 @@ axios.interceptors.response.use(
   async error => {
     console.log("error", error)
     const originalRequest = error.config;
+    console.log("originalRequest", originalRequest)
 
     if (
-      axios.isAxiosError(error) &&
+      // axios.isAxiosError(error) &&
       error.response.status === 401 &&
       !originalRequest._retry &&
       originalRequest.url !== '/users/current/refresh'
@@ -21,9 +22,13 @@ axios.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
+        console.log('try block')
         const refreshResponse = await store.dispatch(refreshTokenAsync());
+        console.log("refreshResponse", refreshResponse)
         if (refreshResponse.meta.requestStatus === 'fulfilled') {
+          console.log('if block before bearer')
           originalRequest.headers.Authorization = `Bearer ${refreshResponse.payload.token}`;
+          originalRequest._retry = false
           return axios(originalRequest);
         } else {
           return Promise.reject(refreshResponse.error);
