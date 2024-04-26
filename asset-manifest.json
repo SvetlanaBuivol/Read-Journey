@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/read-journey/static/css/main.2b1a43ac.css",
-    "main.js": "/read-journey/static/js/main.6dd3a9b4.js",
+    "main.js": "/read-journey/static/js/main.51dff9f8.js",
     "static/js/709.6fb0dd22.chunk.js": "/read-journey/static/js/709.6fb0dd22.chunk.js",
     "static/js/90.b5e18914.chunk.js": "/read-journey/static/js/90.b5e18914.chunk.js",
     "static/js/261.e68637d0.chunk.js": "/read-journey/static/js/261.e68637d0.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/Gilroy-Medium.woff": "/read-journey/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
     "index.html": "/read-journey/index.html",
     "main.2b1a43ac.css.map": "/read-journey/static/css/main.2b1a43ac.css.map",
-    "main.6dd3a9b4.js.map": "/read-journey/static/js/main.6dd3a9b4.js.map",
+    "main.51dff9f8.js.map": "/read-journey/static/js/main.51dff9f8.js.map",
     "709.6fb0dd22.chunk.js.map": "/read-journey/static/js/709.6fb0dd22.chunk.js.map",
     "90.b5e18914.chunk.js.map": "/read-journey/static/js/90.b5e18914.chunk.js.map",
     "261.e68637d0.chunk.js.map": "/read-journey/static/js/261.e68637d0.chunk.js.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.2b1a43ac.css",
-    "static/js/main.6dd3a9b4.js"
+    "static/js/main.51dff9f8.js"
   ]
 }
