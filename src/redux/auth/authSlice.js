@@ -25,6 +25,7 @@ const authSlice = createSlice({
       state.name = action.payload.name;
       state.email = action.payload.email;
       state.token = action.payload.token;
+      state.refreshToken = action.payload.refreshToken;
       state.isLoggedIn = true;
     });
     builder.addCase(registerAsync.rejected, (state, action) => {});
@@ -32,6 +33,7 @@ const authSlice = createSlice({
       state.name = action.payload.name;
       state.email = action.payload.email;
       state.token = action.payload.token;
+      state.refreshToken = action.payload.refreshToken;
       state.isLoggedIn = true;
     });
     builder.addCase(loginAsync.rejected, (state, action) => {});
@@ -39,6 +41,7 @@ const authSlice = createSlice({
       state.name = null;
       state.email = null;
       state.token = null;
+      state.refreshToken = null;
       state.isLoggedIn = false;
     });
     builder.addCase(signoutAsync.rejected, state => {});

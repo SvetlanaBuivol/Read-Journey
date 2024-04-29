@@ -4,33 +4,35 @@ import { refreshTokenAsync } from '../redux/auth/authOperations';
 
 axios.interceptors.response.use(
   response => {
-    console.log("response", response)
+    console.log('response', response);
     return response;
   },
   async error => {
-    console.log("error", error)
+    console.log('error', error);
     const originalRequest = error.config;
-    console.log("originalRequest", originalRequest)
+    console.log('originalRequest', originalRequest);
 
     if (
       // axios.isAxiosError(error) &&
       error.response.status === 401 &&
-      !originalRequest._retry &&
+      !originalRequest._retry
+      &&
       originalRequest.url !== '/users/current/refresh'
     ) {
-      console.log('if Block')
-      originalRequest._retry = true;
+      console.log('if Block');
+      // originalRequest._retry = true;
 
       try {
-        console.log('try block')
+        console.log('try block');
         const refreshResponse = await store.dispatch(refreshTokenAsync());
-        console.log("refreshResponse", refreshResponse)
+        console.log('refreshResponse', refreshResponse);
         if (refreshResponse.meta.requestStatus === 'fulfilled') {
-          console.log('if block before bearer')
+          console.log('if block before bearer');
           originalRequest.headers.Authorization = `Bearer ${refreshResponse.payload.token}`;
-          originalRequest._retry = false
+          originalRequest._retry = false;
           return axios(originalRequest);
         } else {
+          originalRequest._retry = false;
           return Promise.reject(refreshResponse.error);
         }
       } catch (refreshError) {
