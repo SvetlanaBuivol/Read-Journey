@@ -1,3 +1,3 @@
 # Read Journey
 
-![Read Journey Logo](logo.svg)
+![Read Journey Logo](./logo.svg)
